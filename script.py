@@ -1,8 +1,5 @@
 from pytubefix import YouTube 
 
-# where to save 
-SAVE_PATH = "C:/Users/Antonio/Desktop/riserva/pronto"
-
 # link of the video to be downloaded 
 links = []
 
@@ -23,7 +20,7 @@ for link in links:
 
     try: 
         # downloading the video 
-        d_video.download(output_path=SAVE_PATH)
+        d_video.download()
         print('Video downloaded successfully!\n')
     except: 
         print("Some Error!\n")
