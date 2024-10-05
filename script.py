@@ -15,12 +15,9 @@ for link in links:
         #to handle exception 
         print("Connection Error") 
 
-    # Get all streams and filter for mp4 files
-    d_video = yt.streams.filter(file_extension='mp4').get_highest_resolution()
-
     try: 
         # downloading the video 
-        d_video.download()
+        d_video = yt.streams.filter(file_extension='mp4').get_highest_resolution().download()
         print('Video downloaded successfully!\n')
     except: 
         print("Some Error!\n")
